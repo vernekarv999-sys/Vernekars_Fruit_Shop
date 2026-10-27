@@ -103,7 +103,7 @@ nav a{margin:0 6px;font-size:12px}
 </div>
 
 <header>
-<img src="images/logo.png" class="logo" alt="Vernekar's Fruit Shop logo">
+<img src="images/logo.png" class="logo" alt="Vernekar's Fruit Shop logo" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200';">
 
 <div class="brand">
 <h1>VERNEKAR'S</h1>
@@ -145,7 +145,7 @@ nav a{margin:0 6px;font-size:12px}
 SHOP NOW →
 </button>
 </div>
-<img src="images/fruit-basket.png" alt="Fresh fruits basket">
+<img src="images/fruit-basket.png" alt="Fresh fruits basket" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500';">
 </section>
 
 <section class="title" id="fruits">
@@ -185,18 +185,18 @@ SHOP NOW →
 
 <script>
 const fruits=[
-  ["Apple",120,135,10,"images/apple.jpg"],
-  ["Banana",60,65,8,"images/banana.jpg"],
-  ["Mango",150,170,12,"images/mango.jpg"],
-  ["Orange",90,100,10,"images/orange.jpg"],
-  ["Grapes",100,118,15,"images/grapes.jpg"],
-  ["Watermelon",40,50,20,"images/watermelon.jpg"],
-  ["Papaya",70,85,18,"images/papaya.jpg"],
-  ["Pomegranate",160,190,16,"images/pomegranate.jpg"],
-  ["Guava",90,110,18,"images/guava.jpg"],
-  ["Pineapple",80,100,20,"images/pineapple.jpg"],
-  ["Lemon",80,100,20,"images/lemon.jpg"],
-  ["Coconut",50,60,17,"images/coconut.jpg"]
+  ["Apple",120,135,10,"images/apple.jpg","https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300"],
+  ["Banana",60,65,8,"images/banana.jpg","https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300"],
+  ["Mango",150,170,12,"images/mango.jpg","https://images.unsplash.com/photo-1553279768-865429fa0078?w=300"],
+  ["Orange",90,100,10,"images/orange.jpg","https://images.unsplash.com/photo-1547514701-42782101795e?w=300"],
+  ["Grapes",100,118,15,"images/grapes.jpg","https://images.unsplash.com/photo-1596363505729-4190a9506133?w=300"],
+  ["Watermelon",40,50,20,"images/watermelon.jpg","https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300"],
+  ["Papaya",70,85,18,"images/papaya.jpg","https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=300"],
+  ["Pomegranate",160,190,16,"images/pomegranate.jpg","https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=300"],
+  ["Guava",90,110,18,"images/guava.jpg","https://images.unsplash.com/photo-1536511135885-3b10ce71ef12?w=300"],
+  ["Pineapple",80,100,20,"images/pineapple.jpg","https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=300"],
+  ["Lemon",80,100,20,"images/lemon.jpg","https://images.unsplash.com/photo-1534531141161-e4160499e97c?w=300"],
+  ["Coconut",50,60,17,"images/coconut.jpg","https://images.unsplash.com/photo-1544378730-8b5104b18790?w=300"]
 ];
 
 let cart=[];
@@ -231,6 +231,10 @@ function renderProducts(list=fruits){
     const img=document.createElement("img");
     img.src=f[4];
     img.alt=f[0];
+    img.onerror=function(){
+      this.onerror=null;
+      this.src=f[5];
+    };
 
     const name=document.createElement("h3");
     name.textContent=f[0];
