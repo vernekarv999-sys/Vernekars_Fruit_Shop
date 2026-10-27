@@ -7,18 +7,21 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#03070d;color:white}
-.top{padding:9px 5%;border-bottom:1px solid #172333;display:flex;justify-content:space-between;font-size:13px}
+body{font-family:Arial;background:#03070d;color:white}
+.top{padding:9px 5%;border-bottom:1px solid #172333;
+display:flex;justify-content:space-between;font-size:13px}
 .blue{color:#168cff}
 
-header{padding:7px 7%;display:flex;align-items:center;gap:20px;border-bottom:1px solid #172333}
+header{padding:7px 7%;display:flex;align-items:center;gap:20px;
+border-bottom:1px solid #172333}
 .logo{width:80px;height:80px;border-radius:50%;object-fit:cover}
 .brand h1{font:30px Georgia}
 .brand p{color:#168cff;letter-spacing:3px;margin-top:5px}
 .brand{min-width:235px}
 
 .search{display:flex;flex:1}
-.search input{width:100%;padding:14px;background:#08111d;border:1px solid #245080;color:white;border-radius:7px 0 0 7px}
+.search input{width:100%;padding:14px;background:#08111d;
+border:1px solid #245080;color:white;border-radius:7px 0 0 7px}
 .search button{width:55px;background:#075bd4;border:0;color:white;cursor:pointer}
 
 .account,.cart{cursor:pointer;white-space:nowrap}
@@ -27,45 +30,68 @@ nav{text-align:center;padding:17px;border-bottom:1px solid #172333;overflow-x:au
 nav a{color:#ddd;text-decoration:none;margin:0 18px;white-space:nowrap}
 nav a:hover{color:#168cff}
 
-.hero{margin:23px 5%;padding:45px;border-radius:15px;min-height:280px;
+.hero{margin:23px 5%;padding:45px;border-radius:15px;height: auto;min-height:300px;
 background:linear-gradient(110deg,#050d18,#06295a);
 border:1px solid #193653;display:flex;align-items:center;
 justify-content:space-between;overflow:hidden}
-.hero div{max-width:55%}
-.hero img{width:40%;max-width:350px;height:auto;object-fit:contain}
-.hero h2{font-size:38px}
+.hero div{max-width:50%}
+.hero img{width:45%;max-width:400px;height:auto;object-fit:contain}
+.hero h2{font-size:42px}
 .hero h2 span,.title span{color:#168cff}
 .hero p{color:#bdcada;margin:12px 0}
-.hero button,.add{background:#075bd4;color:white;border:0;padding:11px 18px;border-radius:6px;cursor:pointer}
+.hero button,.add{background:#075bd4;color:white;border:0;
+padding:11px 18px;border-radius:6px;cursor:pointer}
 .hero button:hover,.add:hover{background:#168cff}
 
 .title{text-align:center;margin:40px 0 25px}
 .title h2{font-size:32px}
 .title p{color:#9eacc0;margin-top:8px}
 
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0 5% 50px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);
+gap:18px;margin:0 5% 50px}
 
-.card{position:relative;background:#080f18;border:1px solid #1c3047;border-radius:12px;padding:15px;transition:.2s}
+.card{position:relative;background:#080f18;border:1px solid #1c3047;
+border-radius:12px;padding:15px;transition:.2s}
 .card:hover{transform:translateY(-4px);border-color:#168cff}
 .card img{width:100%;height:155px;object-fit:cover;border-radius:6px}
 .card h3{margin:7px 0}
-.discount{position:absolute;top:12px;left:12px;background:#075bd4;padding:5px 8px;border-radius:5px;font-size:12px}
+.discount{position:absolute;top:12px;left:12px;
+background:#075bd4;padding:5px 8px;border-radius:5px;font-size:12px}
 .heart{position:absolute;right:15px;top:12px;font-size:22px;cursor:pointer}
 .stars{color:#168cff}
 .price{color:#36a0ff;font-weight:bold;margin:8px 0 12px}
 .old{text-decoration:line-through;color:#697585;font-size:13px;margin-left:5px}
 .add{width:100%}
+.item button{background:#122238;color:white;border:1px solid #315070;border-radius:5px;padding:4px 8px;cursor:pointer}
+.item button:hover{background:#075bd4}
 
-.modal{display:none;position:fixed;inset:0;background:#000b;align-items:center;justify-content:center;z-index:5}
-.box{background:#08111d;border:1px solid #168cff;border-radius:12px;padding:25px;width:370px;max-width:90%}
+.modal{display:none;position:fixed;inset:0;background:#000b;
+align-items:center;justify-content:center;z-index:5}
+.box{background:#08111d;border:1px solid #168cff;border-radius:12px;
+padding:25px;width:370px;max-width:90%}
 .box h2{color:#168cff;margin-bottom:15px}
-.box input{width:100%;padding:12px;margin:6px 0;background:#03070d;border:1px solid #34516d;color:white;border-radius:4px}
+.box input{width:100%;padding:12px;margin:6px 0;
+background:#03070d;border:1px solid #34516d;color:white;border-radius:4px}
 .close{float:right;font-size:23px;cursor:pointer}
-.item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #26384a}
+.item{display:flex;justify-content:space-between;
+padding:10px 0;border-bottom:1px solid #26384a}
 
-@media(max-width:900px){ .grid{grid-template-columns:repeat(3,1fr)} .brand{display:none} }
-@media(max-width:650px){ .grid{grid-template-columns:repeat(2,1fr)} .account{display:none} .hero{padding:25px} .hero img{width:45%} }
-@media(max-width:430px){ .grid{grid-template-columns:1fr} }
+@media(max-width:900px){
+.grid{grid-template-columns:repeat(3,1fr)}
+.brand{display:none}
+}
+@media(max-width:650px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.account{display:none}
+.hero{padding:25px;gap:10px}
+.hero img{width:45%}
+.hero div{max-width:55%}
+.hero h2{font-size:26px}
+}
+@media(max-width:430px){
+.grid{grid-template-columns:1fr}
+nav a{margin:0 6px;font-size:12px}
+}
 </style>
 </head>
 
@@ -77,7 +103,7 @@ justify-content:space-between;overflow:hidden}
 </div>
 
 <header>
-<img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200" class="logo" alt="Logo">
+<img src="images/logo.png" class="logo" alt="Vernekar's Fruit Shop logo">
 
 <div class="brand">
 <h1>VERNEKAR'S</h1>
@@ -97,6 +123,7 @@ justify-content:space-between;overflow:hidden}
 <div class="cart" onclick="openBox('cart')">
 🛒 Cart (<b id="count">0</b>)
 </div>
+
 </header>
 
 <nav>
@@ -118,7 +145,7 @@ justify-content:space-between;overflow:hidden}
 SHOP NOW →
 </button>
 </div>
-<img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500" alt="Fresh fruits basket">
+<img src="images/fruit-basket.png" alt="Fresh fruits basket">
 </section>
 
 <section class="title" id="fruits">
@@ -158,18 +185,18 @@ SHOP NOW →
 
 <script>
 const fruits=[
-  ["Apple",120,135,10,"https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300"],
-  ["Banana",60,65,8,"https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300"],
-  ["Mango",150,170,12,"https://images.unsplash.com/photo-1553279768-865429fa0078?w=300"],
-  ["Orange",90,100,10,"https://images.unsplash.com/photo-1547514701-42782101795e?w=300"],
-  ["Grapes",100,118,15,"https://images.unsplash.com/photo-1596363505729-4190a9506133?w=300"],
-  ["Watermelon",40,50,20,"https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300"],
-  ["Papaya",70,85,18,"https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=300"],
-  ["Pomegranate",160,190,16,"https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=300"],
-  ["Guava",90,110,18,"https://images.unsplash.com/photo-1536511135885-3b10ce71ef12?w=300"],
-  ["Pineapple",80,100,20,"https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=300"],
-  ["Lemon",80,100,20,"https://images.unsplash.com/photo-1534531141161-e4160499e97c?w=300"],
-  ["Coconut",50,60,17,"https://images.unsplash.com/photo-1544378730-8b5104b18790?w=300"]
+  ["Apple",120,135,10,"images/apple.jpg"],
+  ["Banana",60,65,8,"images/banana.jpg"],
+  ["Mango",150,170,12,"images/mango.jpg"],
+  ["Orange",90,100,10,"images/orange.jpg"],
+  ["Grapes",100,118,15,"images/grapes.jpg"],
+  ["Watermelon",40,50,20,"images/watermelon.jpg"],
+  ["Papaya",70,85,18,"images/papaya.jpg"],
+  ["Pomegranate",160,190,16,"images/pomegranate.jpg"],
+  ["Guava",90,110,18,"images/guava.jpg"],
+  ["Pineapple",80,100,20,"images/pineapple.jpg"],
+  ["Lemon",80,100,20,"images/lemon.jpg"],
+  ["Coconut",50,60,17,"images/coconut.jpg"]
 ];
 
 let cart=[];
@@ -179,33 +206,61 @@ const products=document.getElementById("products");
 
 function renderProducts(list=fruits){
   products.innerHTML="";
+
+  if(list.length===0){
+    products.innerHTML='<p style="grid-column:1/-1;text-align:center;color:#9eacc0;padding:30px">No fruits found.</p>';
+    return;
+  }
+
   list.forEach(f=>{
     const i=fruits.indexOf(f);
     const card=document.createElement("div");
     card.className="card";
-    
+    card.dataset.name=f[0].toLowerCase();
+
+    const discount=document.createElement("span");
+    discount.className="discount";
+    discount.textContent=f[3]+"% OFF";
+
+    const heart=document.createElement("span");
+    heart.className="heart";
+    heart.title="Add to favorites";
+    heart.textContent=favorites.has(i) ? "♥" : "♡";
+    heart.onclick=function(){ toggleFavorite(i,heart); };
+
     const img=document.createElement("img");
     img.src=f[4];
     img.alt=f[0];
 
-    card.innerHTML=`
-      <span class="discount">${f[3]}% OFF</span>
-      <span class="heart" onclick="toggleFavorite(${i},this)">${favorites.has(i)?'♥':'♡'}</span>
-    `;
-    card.appendChild(img);
-    card.innerHTML+=`
-      <h3>${f[0]}</h3>
-      <div class="stars">★★★★★</div>
-      <div class="price">₹${f[1]} / kg <span class="old">₹${f[2]}</span></div>
-      <button class="add" onclick="addCart(${i})">🛒 Add to Cart</button>
-    `;
+    const name=document.createElement("h3");
+    name.textContent=f[0];
+
+    const stars=document.createElement("div");
+    stars.className="stars";
+    stars.textContent="★★★★★";
+
+    const price=document.createElement("div");
+    price.className="price";
+    price.innerHTML="₹"+f[1]+" / kg <span class='old'>₹"+f[2]+"</span>";
+
+    const button=document.createElement("button");
+    button.className="add";
+    button.textContent="🛒 Add to Cart";
+    button.onclick=function(){ addCart(i); };
+
+    card.append(discount,heart,img,name,stars,price,button);
     products.appendChild(card);
   });
 }
 
 function toggleFavorite(i,el){
-  if(favorites.has(i)){ favorites.delete(i); el.innerText="♡"; }
-  else{ favorites.add(i); el.innerText="♥"; }
+  if(favorites.has(i)){
+    favorites.delete(i);
+    el.innerText="♡";
+  }else{
+    favorites.add(i);
+    el.innerText="♥";
+  }
 }
 
 function addCart(i){
@@ -213,20 +268,140 @@ function addCart(i){
   if(existing) existing.qty++;
   else cart.push({index:i,qty:1});
   updateCount();
+  showCart();
 }
 
 function updateCount(){
-  document.getElementById("count").innerText=cart.reduce((sum,item)=>sum+item.qty,0);
+  document.getElementById("count").innerText=
+    cart.reduce((sum,item)=>sum+item.qty,0);
 }
 
-function openBox(id){ document.getElementById(id).style.display="flex"; }
-function closeBox(id){ document.getElementById(id).style.display="none"; }
+function changeQty(i,delta){
+  const item=cart.find(x=>x.index===i);
+  if(!item) return;
+  item.qty+=delta;
+  if(item.qty<=0) cart=cart.filter(x=>x.index!==i);
+  updateCount();
+  showCart();
+}
 
-function login(){ alert("Logged in successfully!"); closeBox("login"); }
-function register(){ alert("Account created!"); closeBox("login"); }
-function checkout(){ alert("Order placed!"); cart=[]; updateCount(); closeBox("cart"); }
+function removeCart(i){
+  cart=cart.filter(x=>x.index!==i);
+  updateCount();
+  showCart();
+}
+
+function openBox(id){
+  document.getElementById(id).style.display="flex";
+  if(id==="cart") showCart();
+}
+
+function closeBox(id){
+  document.getElementById(id).style.display="none";
+}
+
+function showCart(){
+  const box=document.getElementById("items");
+  let total=0;
+
+  if(cart.length===0){
+    box.innerHTML="Your cart is empty.";
+    document.getElementById("total").innerText="0";
+    return;
+  }
+
+  box.innerHTML="";
+  cart.forEach(item=>{
+    const f=fruits[item.index];
+    const subtotal=f[1]*item.qty;
+    total+=subtotal;
+
+    box.innerHTML+=`
+      <div class="item" style="gap:10px;align-items:center">
+        <span style="flex:1">${f[0]}<br><small>₹${f[1]} × ${item.qty}</small></span>
+        <span>
+          <button onclick="changeQty(${item.index},-1)">−</button>
+          <b style="margin:0 8px">${item.qty}</b>
+          <button onclick="changeQty(${item.index},1)">+</button>
+        </span>
+        <b>₹${subtotal}</b>
+        <button onclick="removeCart(${item.index})" title="Remove">✕</button>
+      </div>`;
+  });
+
+  document.getElementById("total").innerText=total;
+}
+
+function checkout(){
+  if(cart.length===0){
+    alert("Your cart is empty. Add some fruits first!");
+    return;
+  }
+  const total=document.getElementById("total").innerText;
+  alert("Order placed successfully! Total: ₹"+total);
+  cart=[];
+  updateCount();
+  closeBox("cart");
+}
+
+function register(){
+  document.querySelector("#login .box").innerHTML=`
+    <span class="close" onclick="closeBox('login')">×</span>
+    <h2>Create Account</h2>
+    <input id="regName" placeholder="Full Name">
+    <input id="regEmail" type="email" placeholder="Email">
+    <input id="regPhone" type="tel" placeholder="Phone Number">
+    <input id="regPassword" type="password" placeholder="Password">
+    <button class="add" onclick="createAccount()">CREATE ACCOUNT</button>
+  `;
+}
+
+function createAccount(){
+  const name=document.getElementById("regName").value.trim();
+  const email=document.getElementById("regEmail").value.trim();
+  const phone=document.getElementById("regPhone").value.trim();
+  const password=document.getElementById("regPassword").value;
+
+  if(!name || !email || !phone || !password){
+    alert("Please fill all fields.");
+    return;
+  }
+  if(!email.includes("@")){
+    alert("Please enter a valid email.");
+    return;
+  }
+  alert("Account created successfully, "+name+"!");
+  closeBox("login");
+}
+
+function login(){
+  const email=document.getElementById("loginEmail").value.trim();
+  const password=document.getElementById("loginPassword").value;
+  if(!email || !password){
+    alert("Please enter email and password.");
+    return;
+  }
+  alert("Login successful!");
+  closeBox("login");
+}
+
+document.getElementById("search").addEventListener("input",function(){
+  const value=this.value.toLowerCase().trim();
+  renderProducts(fruits.filter(f=>f[0].toLowerCase().includes(value)));
+});
+
+document.querySelector(".search button").addEventListener("click",function(){
+  document.getElementById("search").focus();
+});
+
+document.querySelectorAll(".modal").forEach(modal=>{
+  modal.addEventListener("click",function(e){
+    if(e.target===modal) modal.style.display="none";
+  });
+});
 
 renderProducts();
+updateCount();
 </script>
 
 </body>
